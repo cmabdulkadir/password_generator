@@ -23,7 +23,7 @@ function generatePassword() {
   var userLength = window.prompt('How many characters?(please pick a character length between 8-128)');
 
   // I added a while loop for validation
-  while (userLength > 129 || userLength < 7) {
+  while (userLength > 128 || userLength < 8) {
     userLength = window.prompt('Error! How many characters?(please pick a character length between 8-128)');
   }
 
@@ -46,7 +46,7 @@ function generatePassword() {
   const specialPool = ['!', '@', '#', '$', '%'];
 
   var userPool = [];
-
+//.concat is connecting two arrays together
   if (containsLowercase) {
     userPool = userPool.concat(lowerCasePool)
   }
